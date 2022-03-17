@@ -1,0 +1,19 @@
+.mat-form-field {
+  font-size: 14px;
+  padding: 30px;
+  width: 25%;
+}
+
+.mat-raised-button{
+  width: 20%;
+  margin-left: 30px;
+}
+
+
+.main-div {
+  padding:30px;
+}
+
+form {
+  background-color: white;
+}

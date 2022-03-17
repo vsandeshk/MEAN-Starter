@@ -4,11 +4,24 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+
+app.use(function(req, res, next) {
+  console.log("check1");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+
+  next();
+
+});
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
 app.use(bodyParser.json());
+
+
 app.use(routes);
 
 app.get('/', (req,res) => {

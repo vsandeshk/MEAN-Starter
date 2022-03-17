@@ -1,0 +1,56 @@
+<div class="main-div">
+<h1> Add Employee Data </h1>
+
+<form [formGroup]="formGroup" (ngSubmit)="addEmployee()">
+<mat-form-field appearance="outline">
+  <mat-label>User ID</mat-label>
+  <input matInput placeholder="User ID" formControlName="userId">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Enter ID of User</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Job Title</mat-label>
+  <input matInput placeholder="Job Title" formControlName="jobTitle">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Enter Job Title</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>First Name</mat-label>
+  <input matInput placeholder="First Name" formControlName="firstName">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Enter First Name</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Last Name</mat-label>
+  <input matInput placeholder="Last Name" formControlName="lastName">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Enter Last Name</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Employee Code</mat-label>
+  <input matInput placeholder="Employee Code" formControlName="employeeCode">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Enter Employee Code</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Region</mat-label>
+  <input matInput placeholder="Region" formControlName="region">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Enter Region Code</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Phone Number</mat-label>
+  <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+  <mat-icon matSuffix>phone</mat-icon>
+  <mat-hint>Enter Phone Number</mat-hint>
+</mat-form-field>
+<mat-form-field appearance="outline">
+  <mat-label>Email Address</mat-label>
+  <input matInput placeholder="Email Address" formControlName="emailAddress">
+  <mat-error *ngIf="formGroup.value.emailAddress.invalid">Email Address is not valid.</mat-error>
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Enter Email Address</mat-hint>
+</mat-form-field>
+<button mat-raised-button color="primary">Primary</button>
+</form>
+</div>

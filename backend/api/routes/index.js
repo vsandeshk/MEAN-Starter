@@ -7,6 +7,7 @@ router.route('/getData').get((req,res)=>{
 });
 
 router.route('/addData').post((req,res)=>{
+
   myctrl.addData(req, res);
 });
 
