@@ -33,9 +33,9 @@ export class AddEmployeeComponent implements OnInit {
         this.empService.addEmployee(this.formGroup.value).subscribe(results=>{
           alert(results);
         }, error => {
-          console.log(error);
+          console.log(error.error);
 
-          alert(error.message);
+          alert(error.error);
         });
     }
   }

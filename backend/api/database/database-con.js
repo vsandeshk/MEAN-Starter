@@ -13,7 +13,7 @@ module.exports.addData = function(insertQuery, valuesArr, res){
 
   pool.query(query,(err, data) => {
       if(err) {
-        res.status(400).json(err);
+        res.status(400).json("Error! cannot connect to database");
         return;
       }
       console.log(data);
@@ -25,7 +25,7 @@ module.exports.query = function(query, res){
 
   pool.query(query,(err, data) => {
       if(err) {
-        res.status(400).json(err);
+        res.status(400).json("Error! cannot connect to database");
         return;
       }
       res.status(200).json(data)
